@@ -2,84 +2,75 @@
   <div class="works-section">
     <h2 class="works-title">Works</h2>
     <div class="works-area">
-      <div class="works-content" @click="show('MkPortfolio')">
+
+      <div class="works-content" @click="show('furimaApp')">
         <div class="img-effect">
-          <img src="" alt="portfolio">
+          <img src="~/assets/web/furimaApp.png" alt="portfolio">
         </div>
       </div>
 
-      <div class="works-content" @click="show('MkPortfolio')">
+      <div class="works-content" @click="show('protospase')">
         <div class="img-effect">
-          <img src="" alt="portfolio">
+          <img src="~/assets/web/protospase.png" alt="portfolio">
         </div>
       </div>
 
-      <div class="works-content" @click="show('MkPortfolio')">
+      <div class="works-content" @click="show('vueTodo')">
         <div class="img-effect">
-          <img src="" alt="portfolio">
+          <img src="~/assets/web/vueTodo.png" alt="portfolio">
         </div>
       </div>
 
-      <div class="works-content" @click="show('MkPortfolio')">
+      <div class="works-content" @click="show('kuriyosi')">
         <div class="img-effect">
-          <img src="" alt="portfolio">
+          <img src="~/assets/web/kuriyosi.png" alt="portfolio">
         </div>
       </div>
 
-      <div class="works-content" @click="show('MkPortfolio')">
+      <div class="works-content" @click="show('portfolio')">
         <div class="img-effect">
-          <img src="" alt="portfolio">
+          <img src="~/assets/web/portfolio.png" alt="portfolio">
         </div>
       </div>
-
-      <div class="works-content" @click="show('MkPortfolio')">
-        <div class="img-effect">
-          <img src="" alt="portfolio">
-        </div>
-      </div>
-
-      <div class="works-content" @click="show('MkPortfolio')">
-        <div class="img-effect">
-          <img src="" alt="portfolio">
-        </div>
-      </div>
-
-      <div class="works-content" @click="show('MkPortfolio')">
-        <div class="img-effect">
-          <img src="" alt="portfolio">
-        </div>
-      </div>
-
-      <div class="works-content" @click="show('MkPortfolio')">
-        <div class="img-effect">
-          <img src="" alt="portfolio">
-        </div>
-      </div>
-
-      <div class="works-content" @click="show('MkPortfolio')">
-        <div class="img-effect">
-          <img src="" alt="portfolio">
-        </div>
-      </div>
-
-      <div class="works-content" @click="show('MkPortfolio')">
-        <div class="img-effect">
-          <img src="" alt="portfolio">
-        </div>
-      </div>
-
-      <div class="works-content" @click="show('MkPortfolio')">
-        <div class="img-effect">
-          <img src="" alt="portfolio">
-        </div>
-      </div>
-
     </div>
+
+    <!-- モーダル部分 -->
+    <client-only>
+      <modal name="modal-content" width="80%" height="auto" :scrolladle="treu">
+        <p class="close-btn" @click="hide">
+          <i class="fas fa-times"></i>
+        </p>
+        <component :is="contentTitle" />
+      </modal>
+    </client-only>
   </div>
 </template>
 
 <script>
-export default {}
+import FurimaApp from "~/components/works/FurimaApp.vue";
+
+export default {
+  data(){
+    return{
+      contentTitle: null,
+    }
+  },
+  methods:{
+    show(contentTitle) {
+      this.contentTitle = contentTitle;
+      this.$modal.show("modal-content");
+    },
+    hide() {
+      this.$modal.hide("modal-content");
+      this.contentTitle = null;
+    }
+  },
+
+  components: {
+    FurimaApp,
+  }
+
+}
 </script>
 
 <style lang="scss">
@@ -134,6 +125,9 @@ export default {}
           font-size: 22px;
           text-shadow: 0 0 2px #000;
           filter: blur(4px);
+        }
+        img{
+          width: 100%;
         }
       }
     }

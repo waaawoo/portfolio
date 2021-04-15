@@ -53,6 +53,7 @@ export default {
     width: 150px;
     img{
       width: 100%;
+      box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.4);
     }
   }
 </style>

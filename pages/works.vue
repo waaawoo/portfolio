@@ -41,7 +41,7 @@
 
     <!-- モーダル部分 -->
     <client-only>
-      <modal name="modal-content" width="80%" height="auto" :scrolladle="treu">
+      <modal name="modal-content" width="80%" height="auto">
         <p class="close-btn" @click="hide">
           <i class="fas fa-times"></i>
         </p>

@@ -79,10 +79,11 @@ export default {
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
-      .main-title{
-        font-size: 4rem;
+      @media screen and(min-width : 768px){
+        .main-title{
+          font-size: 4rem;
+        }
       }
-
       .gnav{
         display: flex;
         justify-content: space-between;

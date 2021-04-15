@@ -10,7 +10,6 @@
         少しでも見ていただけたら幸いです。
       </p>
     </div>
-
   </div>
 </template>
 
@@ -33,7 +32,7 @@ export default {
 
 <style lang="scss" scoped>
   .home{
-    margin: 150px auto;
+    margin: 150px auto 30px;
     text-align: center;
     height: 50vh;
     background-image: url("~@/assets/web/TOP.jpg");
@@ -53,6 +52,7 @@ export default {
       .home-description{
         margin-top: 10px;
       }
+
     }
   }
 </style>

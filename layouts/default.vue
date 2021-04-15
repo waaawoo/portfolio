@@ -1,20 +1,49 @@
 <template>
   <div>
-    <Nuxt />
+    <HeaderSection @click="clickSpNav" :spNavFlag="spNavFlag" />
+    <template v-if="spNavFlag">
+      <Spnav @click="clickSpNav"/>
+    </template>
+    <div><Nuxt /></div>
+    <FooterSection/>
   </div>
 </template>
 
+<script>
+import HeaderSection from "~/components/Header.vue";
+import FooterSection from "~/components/Footer.vue";
+import Spnav from "~/components/Spnav.vue"
+
+export default {
+  data(){
+    return{
+      spNavFlag: false
+    }
+  },
+  components:{
+    HeaderSection,
+    FooterSection,
+    Spnav
+  },
+  methods:{
+    clickSpNav(){
+      this.spNavFlag = !this.spNavFlag
+    }
+  },
+  // 監視用
+  watch: {
+    $route(){
+      if(this.spNavFlag){
+        this.spNavFlag = false
+      }
+    }
+  }
+}
+</script>
+
 <style>
 html {
-  font-family:
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
+  font-family: 'Josefin Slab', serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;

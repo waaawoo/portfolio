@@ -89,7 +89,7 @@ export default {
 
 <style lang="scss">
   .works-section{
-    margin:250px auto 50px;
+    margin:150px auto 50px;
     width: 60%;
   }
   .works-title{

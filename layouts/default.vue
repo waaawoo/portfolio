@@ -1,19 +1,42 @@
 <template>
   <div>
-    <Header/>
+    <HeaderSection @click="clickSpNav" :spNavFlag="spNavFlag" />
+    <template v-if="spNavFlag">
+      <Spnav @click="clickSpNav"/>
+    </template>
     <div><Nuxt /></div>
-    <Footer/>
+    <FooterSection/>
   </div>
 </template>
 
 <script>
-import Header from "~/components/Header.vue";
-import Footer from "~/components/Footer.vue";
+import HeaderSection from "~/components/Header.vue";
+import FooterSection from "~/components/Footer.vue";
+import Spnav from "~/components/Spnav.vue"
 
 export default {
+  data(){
+    return{
+      spNavFlag: false
+    }
+  },
   components:{
-    Header,
-    Footer
+    HeaderSection,
+    FooterSection,
+    Spnav
+  },
+  methods:{
+    clickSpNav(){
+      this.spNavFlag = !this.spNavFlag
+    }
+  },
+  // 監視用
+  watch: {
+    $route(){
+      if(this.spNavFlag){
+        this.spNavFlag = false
+      }
+    }
   }
 }
 </script>

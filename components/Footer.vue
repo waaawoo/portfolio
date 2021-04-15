@@ -4,7 +4,7 @@
       <p>
         <small>MK portfolio</small>
       </p>
-      <p v-show = "windowHeight > 100" class="top-btn" @click="returnTop" >Topへ </p>
+      <p v-show = "windowHeight > 100" class="top-btn" @click="returnTop" >Top</p>
     </div>
   </footer>
 </template>
@@ -48,15 +48,18 @@ export default {
     color:#fff;
     text-align: center;
     padding: 30px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
   }
   .top-btn{
     position: fixed;
     bottom: 10px;
-    right: 10px;
+    right: 100px;
     width: 50px;
     height: 50px;
     line-height: 50px;
-    border-radius: 4px;
+    border-radius: 50%;
     background: #333;
     color: #fff;
     cursor: pointer;

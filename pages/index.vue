@@ -1,11 +1,18 @@
 <template>
   <div>
-
+    <WorksSection />
   </div>
 </template>
 
 <script>
-export default {}
+  import WorksSection from "~/pages/works.vue"
+
+export default {
+
+  components:{
+    WorksSection,
+  }
+}
 </script>
 
 <style lang="scss">

@@ -4,7 +4,7 @@
     <template v-if="spNavFlag">
       <Spnav @click="clickSpNav"/>
     </template>
-    <div><Nuxt /></div>
+    <div class="Nuxt"><Nuxt /></div>
     <FooterSection/>
   </div>
 </template>
@@ -88,4 +88,5 @@ html {
   color: #fff;
   background-color: #35495e;
 }
+
 </style>

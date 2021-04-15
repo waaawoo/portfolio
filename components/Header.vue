@@ -37,14 +37,21 @@ export default {
   data() {
     return {
       windowWidth: "",
+      headerHeight: "",
       headerFixed: null,
-      gnavFixed: null
+      gnavFixed: null,
+
+
+
     };
   },
   // DOMが作られた後実行される
   mounted() {
     // pageオープン時のwindowサイズを見ている
     this.windowWidth = window.innerWidth;
+    // スクロール管理 $refs=headerHeightへ現在のいちを取得
+    // this.headerHeight = this.$refs.header.clientHeight;
+    // window.addEventListener('scroll', this.scrollWindow)
   },
   methods: {
     // クリック時反転
@@ -64,6 +71,7 @@ export default {
     position: fixed;
     width: 100%;
     z-index: 98;
+    top: 0;
 
     .container{
       width: 80%;

@@ -17,7 +17,7 @@
         </div>
       </div>
 
-      <div class="works-content" @click="show('vueTodo')">
+      <div class="works-content" @click="show('todoApp')">
         <p class="lang">Vue.js</p>
         <div class="img-effect">
           <img src="~/assets/web/vueTodo.png" alt="portfolio">
@@ -54,6 +54,9 @@
 <script>
 import FurimaApp from "~/components/works/FurimaApp.vue";
 import ProtoSpace from "~/components/works/ProtoSpace.vue";
+import todoApp from "~/components/works/todoApp.vue";
+import kuriyosi from "~/components/works/kurisyosi.vue";
+import portfolio from "~/components/works/portfolio.vue";
 
 export default {
   data(){
@@ -76,6 +79,9 @@ export default {
   components: {
     FurimaApp,
     ProtoSpace,
+    todoApp,
+    kuriyosi,
+    portfolio,
   }
 
 }

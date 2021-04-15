@@ -1,16 +1,16 @@
 <template>
   <div>
     <div class="furimaApp">
-      <div class="furima-title"><h2>ProtoSpace</h2></div>
+      <div class="furima-title"><h2>TodoApp</h2></div>
       <div class="furima-content">
         <div class="img">
           <hr>
-          <img src="~/assets/web/protospase.png" alt="parotospace">
+          <img src="~/assets/web/vueTodo.png" alt="parotospace">
           <hr>
         </div>
         <div class="furima-btn">
-          <button class="btn"><a href="https://github.com/waaawoo/protospace-34760" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a></button>
-          <button class="btn"><a href="https://protospace-34760.herokuapp.com/" target="_blank" rel="noopener noreferrer">ProtoSpace</a></button>
+          <button class="btn"><a href="https://github.com/waaawoo/vue_todo_app" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a></button>
+          <button class="btn"><a href="https://vue-todo-app-34760.herokuapp.com/" target="_blank" rel="noopener noreferrer">TodoApp</a></button>
         </div>
       </div>
     </div>

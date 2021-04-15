@@ -1,5 +1,6 @@
 <template>
   <div>
+    <WorksSection />
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <div class="works-section">
-    <h2 class="works-title">Works</h2>
+    <h2 class="works-title">My portfolio</h2>
     <div class="works-area">
 
       <div class="works-content" @click="show('furimaApp')">

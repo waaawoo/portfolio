@@ -10,7 +10,7 @@
         </div>
         <div class="furima-btn">
           <button class="btn"><a href="https://github.com/waaawoo/portfolio" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a></button>
-          <button class="btn"><a href="" target="_blank" rel="noopener noreferrer">ProtoSpace</a></button>
+          <button class="btn"><a href="" target="_blank" rel="noopener noreferrer">portfolio</a></button>
         </div>
       </div>
     </div>

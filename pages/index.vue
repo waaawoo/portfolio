@@ -1,19 +1,19 @@
 <template>
   <div>
-    <Homesection />
+    <TopSection />
     <WorksSection />
   </div>
 </template>
 
 <script>
-  import Homesection from  "~/components/home/about.vue";
+  import TopSection from  "~/pages/top.vue";
   import WorksSection from "~/pages/works.vue"
 
 export default {
 
   components:{
     WorksSection,
-    Homesection,
+    TopSection,
   }
 }
 </script>

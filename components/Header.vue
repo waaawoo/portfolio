@@ -72,7 +72,7 @@ export default {
     width: 100%;
     z-index: 98;
     top: 0;
-
+    background-color: #fff;
     .container{
       width: 80%;
       margin: 0 auto;

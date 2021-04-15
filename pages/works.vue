@@ -4,30 +4,35 @@
     <div class="works-area">
 
       <div class="works-content" @click="show('furimaApp')">
+        <p class="lang">Ruby on Rails</p>
         <div class="img-effect">
           <img src="~/assets/web/furimaApp.png" alt="portfolio">
         </div>
       </div>
 
-      <div class="works-content" @click="show('protospase')">
+      <div class="works-content" @click="show('protoSpace')">
+        <p class="lang">Ruby on Rails</p>
         <div class="img-effect">
           <img src="~/assets/web/protospase.png" alt="portfolio">
         </div>
       </div>
 
       <div class="works-content" @click="show('vueTodo')">
+        <p class="lang">Vue.js</p>
         <div class="img-effect">
           <img src="~/assets/web/vueTodo.png" alt="portfolio">
         </div>
       </div>
 
       <div class="works-content" @click="show('kuriyosi')">
+        <p class="lang">Ruby on Rails</p>
         <div class="img-effect">
           <img src="~/assets/web/kuriyosi.png" alt="portfolio">
         </div>
       </div>
 
       <div class="works-content" @click="show('portfolio')">
+        <p class="lang">Nuxt.js</p>
         <div class="img-effect">
           <img src="~/assets/web/portfolio.png" alt="portfolio">
         </div>
@@ -48,6 +53,7 @@
 
 <script>
 import FurimaApp from "~/components/works/FurimaApp.vue";
+import ProtoSpace from "~/components/works/ProtoSpace.vue";
 
 export default {
   data(){
@@ -56,6 +62,7 @@ export default {
     }
   },
   methods:{
+    // モーダル表示用
     show(contentTitle) {
       this.contentTitle = contentTitle;
       this.$modal.show("modal-content");
@@ -68,6 +75,7 @@ export default {
 
   components: {
     FurimaApp,
+    ProtoSpace,
   }
 
 }
@@ -104,7 +112,7 @@ export default {
         transition-duration: 0.3s;
         &:hover{
           // ホバー時にサイズが大きくなる
-          transform: scale(1.1);
+          transform: scale(1.2);
           &:before{
             opacity: 1;
             transform: scale(1.2);
@@ -141,6 +149,11 @@ export default {
     text-align: center;
     background-color: #333;
     cursor: pointer;
+  }
+  .lang{
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black;
   }
 
 </style>

@@ -5,7 +5,9 @@
 
 <script>
   import WorksSection from "~/pages/works.vue"
+
 export default {
+
   components:{
     WorksSection,
   }

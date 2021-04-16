@@ -9,8 +9,8 @@
           <hr>
         </div>
         <div class="furima-btn">
-          <button class="btn"><a href="https://github.com/waaawoo/kuriyosi" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a></button>
-          <button class="btn"><a href="https://kuriyosi.herokuapp.com/" target="_blank" rel="noopener noreferrer">kuriyosi</a></button>
+          <a href="https://github.com/waaawoo/kuriyosi" target="_blank" rel="noopener noreferrer"><button class="btn"><i class="fab fa-github"></i> GitHub</button></a>
+          <a href="https://kuriyosi.herokuapp.com/" target="_blank" rel="noopener noreferrer"><button class="btn">kuriyosi</button></a>
         </div>
       </div>
     </div>
@@ -58,6 +58,7 @@ export default {
     .btn{
       width: 30%;
       height: 30px;
+      font-weight: bold;
       a{
         text-decoration: none;
         color: #333;

@@ -9,8 +9,8 @@
           <hr>
         </div>
         <div class="furima-btn">
-          <button class="btn"><a href="https://github.com/waaawoo/vue_todo_app" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a></button>
-          <button class="btn"><a href="https://vue-todo-app-34760.herokuapp.com/" target="_blank" rel="noopener noreferrer">TodoApp</a></button>
+          <a href="https://github.com/waaawoo/vue_todo_app" target="_blank" rel="noopener noreferrer"><button class="btn"><i class="fab fa-github"></i> GitHub</button></a>
+          <a href="https://vue-todo-app-34760.herokuapp.com/" target="_blank" rel="noopener noreferrer"><button class="btn">TodoApp</button></a>
         </div>
       </div>
     </div>
@@ -58,6 +58,7 @@ export default {
     .btn{
       width: 30%;
       height: 30px;
+      font-weight: bold;
       a{
         text-decoration: none;
         color: #333;

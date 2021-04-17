@@ -5,7 +5,7 @@
       <div class="furima-content">
         <div class="img">
           <hr>
-          <img src="~/assets/web/FurimaApp.png" alt="">
+          <img src="~/assets/web/furimaApp.png" alt="">
           <hr>
         </div>
         <div class="furima-btn">

@@ -3,7 +3,6 @@
     <header class="header" :class="headerFixed">
       <div class="container">
         <h1 class="main-title">MK portfolio</h1>
-
         <!-- レスポンシブ用 -->
         <nav v-if="windowWidth > 968">
           <!-- PC用 -->
@@ -21,10 +20,14 @@
         </nav>
 
         <!-- SP用 -->
-        <div v-else class="sp-nav-btn" @click="clickNav">
-          <i class="fas fa-times" v-if="spNavFlag"></i>
+        <div v-else class="sp-nav-btn" @click="$store.commit('changFlg')">
+          <i class="fas fa-times" v-if="$store.state.spClick"></i>
           <i class="fas fa-bars" v-else></i>
+          <template v-if="$store.state.spClick">
+            <Spnav @clickSpNav="clickSpNav"/>
+          </template>
         </div>
+
 
       </div>
     </header>
@@ -32,17 +35,14 @@
 </template>
 
 <script>
+import Spnav from "~/components/Spnav.vue"
 export default {
-  props: ["spNavFlag"],
   data() {
     return {
       windowWidth: "",
       headerHeight: "",
       headerFixed: null,
       gnavFixed: null,
-
-
-
     };
   },
   // DOMが作られた後実行される
@@ -58,8 +58,11 @@ export default {
     clickNav(){
       this.$emit("clickSpNav")
     }
-
   },
+
+  components:{
+    Spnav,
+  }
 };
 </script>
 

@@ -1,6 +1,10 @@
 <template>
   <div>
-    <h1>SP</h1>
+    <ul class="sp-nav">
+      <li><nuxt-link active-class="link-active" to="/" exact>Home</nuxt-link></li>
+      <li><nuxt-link active-class="link-active" to="/works">Works</nuxt-link></li>
+      <li><nuxt-link active-class="link-active" to="/contact">Contact</nuxt-link></li>
+    </ul>
   </div>
 </template>
 

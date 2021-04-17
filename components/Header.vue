@@ -1,9 +1,8 @@
 <template>
   <div>
-    <header class="header" :class="headerFixed">
+    <header class="header" :class="headerFixed" v-if="!$store.state.spClick">
       <div class="container">
         <h1 class="main-title">MK portfolio</h1>
-
         <!-- レスポンシブ用 -->
         <nav v-if="windowWidth > 968">
           <!-- PC用 -->
@@ -21,28 +20,26 @@
         </nav>
 
         <!-- SP用 -->
-        <div v-else class="sp-nav-btn" @click="clickNav">
-          <i class="fas fa-times" v-if="spNavFlag"></i>
-          <i class="fas fa-bars" v-else></i>
+        <div v-else class="sp-nav-btn" @click="$store.commit('changFlg')">
+          <i class="fas fa-bars" v-if="!$store.state.spClick"></i>
         </div>
-
       </div>
     </header>
+    <template v-if="$store.state.spClick">
+      <Spnav />
+    </template>
   </div>
 </template>
 
 <script>
+import Spnav from "~/components/Spnav.vue"
 export default {
-  props: ["spNavFlag"],
   data() {
     return {
       windowWidth: "",
       headerHeight: "",
       headerFixed: null,
       gnavFixed: null,
-
-
-
     };
   },
   // DOMが作られた後実行される
@@ -54,12 +51,11 @@ export default {
     // window.addEventListener('scroll', this.scrollWindow)
   },
   methods: {
-    // クリック時反転
-    clickNav(){
-      this.$emit("clickSpNav")
-    }
-
   },
+
+  components:{
+    Spnav,
+  }
 };
 </script>
 
@@ -123,6 +119,9 @@ export default {
 
     .link-active{
       border-bottom: 2px solid black;
+    }
+    .fa-bars{
+      font-size: 2em;
     }
   }
 </style>

@@ -1,9 +1,6 @@
 <template>
   <div>
-    <HeaderSection @click="clickSpNav" :spNavFlag="spNavFlag" />
-    <template v-if="spNavFlag">
-      <Spnav @click="clickSpNav"/>
-    </template>
+    <HeaderSection/>
     <div class="Nuxt"><Nuxt /></div>
     <FooterSection/>
   </div>
@@ -12,7 +9,7 @@
 <script>
 import HeaderSection from "~/components/Header.vue";
 import FooterSection from "~/components/Footer.vue";
-import Spnav from "~/components/Spnav.vue"
+
 
 export default {
   data(){
@@ -23,21 +20,8 @@ export default {
   components:{
     HeaderSection,
     FooterSection,
-    Spnav
+
   },
-  methods:{
-    clickSpNav(){
-      this.spNavFlag = !this.spNavFlag
-    }
-  },
-  // 監視用
-  watch: {
-    $route(){
-      if(this.spNavFlag){
-        this.spNavFlag = false
-      }
-    }
-  }
 }
 </script>
 

@@ -34,6 +34,9 @@ export default {
 
 <style lang="scss" scoped>
   .contact{
+    @media screen and(min-width:900) {
+
+    }
     margin: 150px 0;
     text-align: center;
     &-title{

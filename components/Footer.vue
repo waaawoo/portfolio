@@ -4,7 +4,7 @@
       <p>
         <small>MK portfolio</small>
       </p>
-      <p v-show = "windowHeight > 100" class="top-btn" @click="returnTop" >Top</p>
+      <p class="top-btn" @click="returnTop" >Top</p>
     </div>
   </footer>
 </template>

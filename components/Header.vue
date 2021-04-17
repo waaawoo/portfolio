@@ -72,17 +72,18 @@ export default {
     width: 100%;
     z-index: 98;
     top: 0;
-
+    background-color: #fff;
     .container{
       width: 80%;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
-      .main-title{
-        font-size: 4rem;
+      @media screen and(min-width : 768px){
+        .main-title{
+          font-size: 4rem;
+        }
       }
-
       .gnav{
         display: flex;
         justify-content: space-between;

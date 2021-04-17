@@ -1,6 +1,6 @@
 <template>
   <div class="works-section">
-    <h2 class="works-title">Works</h2>
+    <h2 class="works-title">My portfolio</h2>
     <div class="works-area">
 
       <div class="works-content" @click="show('furimaApp')">
@@ -41,7 +41,7 @@
 
     <!-- モーダル部分 -->
     <client-only>
-      <modal name="modal-content" width="80%" height="auto" :scrolladle="treu">
+      <modal name="modal-content" width="80%" height="auto">
         <p class="close-btn" @click="hide">
           <i class="fas fa-times"></i>
         </p>
@@ -89,7 +89,7 @@ export default {
 
 <style lang="scss">
   .works-section{
-    margin:250px auto 50px;
+    margin:150px auto 50px;
     width: 60%;
   }
   .works-title{

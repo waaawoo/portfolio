@@ -22,19 +22,6 @@ export default {
     FooterSection,
 
   },
-  methods:{
-    clickSpNav(){
-      this.spNavFlag = !this.spNavFlag
-    }
-  },
-  // 監視用
-  watch: {
-    $route(){
-      if(this.spNavFlag){
-        this.spNavFlag = false
-      }
-    }
-  }
 }
 </script>
 

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header class="header" :class="headerFixed">
+    <header class="header" :class="headerFixed" v-if="!$store.state.spClick">
       <div class="container">
         <h1 class="main-title">MK portfolio</h1>
         <!-- レスポンシブ用 -->
@@ -21,16 +21,13 @@
 
         <!-- SP用 -->
         <div v-else class="sp-nav-btn" @click="$store.commit('changFlg')">
-          <i class="fas fa-times" v-if="$store.state.spClick"></i>
-          <i class="fas fa-bars" v-else></i>
-          <template v-if="$store.state.spClick">
-            <Spnav @clickSpNav="clickSpNav"/>
-          </template>
+          <i class="fas fa-bars" v-if="!$store.state.spClick"></i>
         </div>
-
-
       </div>
     </header>
+    <template v-if="$store.state.spClick">
+      <Spnav />
+    </template>
   </div>
 </template>
 
@@ -54,10 +51,6 @@ export default {
     // window.addEventListener('scroll', this.scrollWindow)
   },
   methods: {
-    // クリック時反転
-    clickNav(){
-      this.$emit("clickSpNav")
-    }
   },
 
   components:{
@@ -126,6 +119,9 @@ export default {
 
     .link-active{
       border-bottom: 2px solid black;
+    }
+    .fa-bars{
+      font-size: 2em;
     }
   }
 </style>

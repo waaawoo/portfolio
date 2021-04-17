@@ -162,4 +162,15 @@ export default {
     text-shadow: 1px 1px 2px black;
   }
 
+  .btn{
+    cursor: pointer;
+    transition: all .3s;
+    background: #fff;
+    border: 1px solid #333;
+    &:hover{
+      background: #333;
+      color: #fff;
+      transform: rotateX(360deg)
+    }
+  }
 </style>

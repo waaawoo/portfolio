@@ -1,20 +1,21 @@
-# portfolio
 
-## Build Setup
+# 環境
+ Nuxt @ v2.15.4
+# アプリケーション名
+MK portfolio
 
-```bash
-# install dependencies
-$ npm install
+# アプリケーション概要
+ 自身のポートフォリをを掲載する為のサイト
+ 新しい言語学習の為、Nuxt.jsで作成
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+# サイトURL
+https://distracted-ardinghelli-a9d4ff.netlify.app/
 
-# build for production and launch server
-$ npm run build
-$ npm run start
+# 利用方法
+自身のポートフォリをサイトへ載せている為、
+それをサイト訪問者に閲覧していただく
 
-# generate static project
-$ npm run generate
-```
+# 実装機能
+モーダルウィンドウで制作したサイトへのリンク、GitHubへのリンクを掲載
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+

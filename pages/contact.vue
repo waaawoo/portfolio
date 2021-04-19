@@ -4,7 +4,9 @@
     <p class="contact-text">~お問い合わせ~</p>
     <div>
       <div class="twitter-img">
-        <img src="~/assets/web/twitterimg.png" alt="">
+        <a href="https://twitter.com/output55460830">
+          <img src="~/assets/web/twitterimg.png" alt="">
+        </a>
       </div>
       <div class="contact-text">
         <p class="email">E-mail: waaawooo37ta2@gmail.com</p>
@@ -57,6 +59,11 @@ export default {
     img{
       width: 100%;
       box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.4);
+      transition: all .5s;
+      &:hover{
+        box-shadow: 0 15px 10px 5px rgba(0, 0, 0, 0.6);
+        transform: translateY(-10px);
+      }
     }
   }
 </style>
